@@ -1,14 +1,14 @@
 build-page:
 	git branch -D gh-pages
 	git checkout --orphan gh-pages
+	sed -i.bak 's/\.\.\/vendor/public/g' examples/index.html
+	sed -i.bak 's/\.\.\///g' examples/index.html
+	sed -i.bak 's/\.\.\/vendor/public/g' examples/view.html
+	sed -i.bak 's/\.\.\///g' examples/view.html
 	cp examples/* .
 	mkdir public
 	cp -R vendor/* public
-	for HTML in $(find . -type f -name "*.html")
-	do
-		sed -i.bak 's/\.\.\/vendor/public/g' $HTML
-		sed -i.bak 's/\.\.\///g' $HTML
-	done
+
 	rm *.bak
 	git add . -A
 	git commit -m 'Building gh-pages branch'
