@@ -10,6 +10,13 @@
   		el: $('#steps')
   	});
 
+
+    window.router = new recline.URLState();
+
+    state.on('change', function(){
+      var serialized = router.getSerializedState(state);
+    });
+
     msv.addStep(new LoadDataView(sharedObject));
     msv.addStep(new DataOptionsView(sharedObject));
     msv.addStep(new ChooseChartView(sharedObject));

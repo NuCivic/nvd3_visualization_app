@@ -2,7 +2,7 @@
   'use strict';
 
   my.ChartOptionsView = Backbone.View.extend({
-    template: '<div class="col-md-12" id="chart-with-controls">' +
+    template: '<div class="row" id="chart-with-controls">' +
                 '<div class="col-md-7">' +
                   '<ul class="nav nav-tabs" role="tablist" id="myTab">' +
                     '<li role="presentation" class="active"><a href="#chart-tab" aria-controls="home" role="tab" data-toggle="tab">Chart</a></li>' +
@@ -39,9 +39,9 @@
                   '<div id="extended-controls"></div>' +
                 '</div>' +
               '</div>' +
-              '<div class="col-md-12" id="controls">' +
+              '<div class="row" id="controls">' +
                 '<div id="prev" class="btn btn-default pull-left">Back</div>' +
-                '<button type="submit" class="form-submit btn btn-success pull-right">Finish</button>' +
+                '<div id="next" class="btn btn-primary pull-right">Next</div>' +
               '</div>',
     initialize: function(options){
       var self = this;
