@@ -4,8 +4,11 @@ build-page:
 	cp examples/* .
 	mkdir public
 	cp -R vendor/* public
-	sed -i.bak 's/\.\.\/vendor/public/g' index.html
-	sed -i.bak 's/\.\.\///g' index.html
+	for HTML in $(find . -type f -name "*.html")
+	do
+		sed -i.bak 's/\.\.\/vendor/public/g' $HTML
+		sed -i.bak 's/\.\.\///g' $HTML
+	done
 	rm *.bak
 	git add . -A
 	git commit -m 'Building gh-pages branch'
