@@ -59,7 +59,8 @@
       console.log('ChartOptionsView::render');
       var self = this;
       var graphType = self.state.get('graphType');
-      var serialized = router.getSerializedState(self.state);
+      var jsonState = self.cleanState(self.state);
+      var serialized = router.getSerializedState(jsonState);
       var url = location.protocol + '//' + location.host + location.pathname + 'view.html' + '#' + serialized;
 
       var iframeHtml = Mustache.render(self.embedTmpl, {
@@ -69,7 +70,7 @@
       });
 
       var tmplData = {
-        state: self.state.toJSON(),
+        state: jsonState,
         width: 640,
         height: 480,
         serialized: serialized,
@@ -86,6 +87,24 @@
 
       self.assign(self.graph, '#chart-viewport');
       self.$('.chosen-select').chosen({width: '95%'});
+    },
+    cleanState: function(state){
+      var st = state.toJSON();
+      st = _.omit(st, [
+        'graphTypes',
+        'sortFields',
+        'fields',
+        'xDataTypes',
+        'step',
+        'height',
+        'width',
+        'xfields',
+        'source',
+      ]);
+      st = _.omit(st, function(value, key, object){
+        return !value;
+      });
+      return st;
     },
     updateState: function(state, cb){
       cb(state);
