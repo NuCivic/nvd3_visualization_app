@@ -40,7 +40,8 @@
       };
       state.set('model', new recline.Model.Dataset(source));
       state.set('source', source);
-      state.get('model').fetch().done(function(){
+      state.get('model').queryState.attributes.size = 10000;
+      state.get('model').fetch().done(function(data){
         cb(state);
       });
     }
