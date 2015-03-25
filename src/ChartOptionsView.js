@@ -57,6 +57,7 @@
       var self = this;
       var graphType = self.state.get('graphType');
 
+      self.state.set('group', true, {silent:true});
       self.$el.html(Mustache.render(self.template, self.state.toJSON()));
 
       // Common controls for all the charts.

@@ -13,8 +13,9 @@
     state.set('height', window.innerHeight - 20);
 
     var model = new recline.Model.Dataset(state.get('model'));
+    model.queryState.attributes.size = 10000000;
     model.fetch().done(function(){
-      var chart = new recline.View.nvd3[state.get('graphType')]({
+      window.chart = new recline.View.nvd3[state.get('graphType')]({
           model: model,
           state: state,
           el: $('#chart'),
