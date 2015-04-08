@@ -17,7 +17,7 @@
                       '</div>' +
                       '<div class="form-group">' +
                         '<label>X Field</label>' +
-                        '<div>{{xfield}}</div>'+
+                        '<div>{{options.x}}</div>'+
                       '</div>' +
                       '<div class="form-group">' +
                         '<label>Series fields</label>' +

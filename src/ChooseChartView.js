@@ -50,7 +50,7 @@
     render: function(){
       var self = this;
       var graphTypes = ['discreteBarChart', 'multiBarChart', 'stackedAreaChart', 'pieChart',
-        'lineChart', 'lineWithFocusChart', 'scatterChart', 'linePlusBarChart'
+        'lineChart', 'lineWithFocusChart', 'scatterChart', 'cumulativeLineChart'
       ];
 
       self.state.set('graphTypes', _.applyOption(

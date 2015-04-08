@@ -106,6 +106,6 @@
   background-image: url('img/scatter.png');
 }
 
-#chart-selector .linePlusBarChart {
-  background-image: url('img/lineplusbar.png');
+#chart-selector .cumulativeLineChart {
+  background-image: url('img/cumulativeline.png');
 }
