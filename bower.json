@@ -30,6 +30,6 @@
     "lodash": "*",
     "recline.backend.gdocs": "https://github.com/okfn/recline.backend.gdocs.git#e81bb237759353932834a38a0ec810441e0ada10",
     "csv.js": "https://github.com/okfn/csv.js.git#976b61384a1808eb464aca5876e5ea46c98deaee",
-    "recline.view.nvd3.js": "https://github.com/NuCivic/recline.view.nvd3.js.git#removing_steps"
+    "recline.view.nvd3.js": "https://github.com/NuCivic/recline.view.nvd3.js.git"
   }
 }
