@@ -27,7 +27,7 @@
               '<div class="col-md-12" id="controls">' +
                 '<div id="prev" class="btn btn-default pull-left">Back</div>' +
               '</div>',
-    embedTmpl: '<iframe src="{{{source}}}" width="{{width}}" height="{{height}}" frameBorder="0" style="overflow:hidden" scrolling="no"></iframe>',
+    embedTmpl: '<iframe src=\'{{{source}}}\' width="{{width}}" height="{{height}}" frameBorder="0" style="overflow:hidden" scrolling="no"></iframe>',
     initialize: function(options){
       var self = this;
       self.options = _.defaults(options || {}, self.options);
