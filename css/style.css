@@ -109,3 +109,6 @@
 #chart-selector .cumulativeLineChart {
   background-image: url('img/cumulativeline.png');
 }
+#example {
+  margin-top: 100px;
+}
