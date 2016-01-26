@@ -53,7 +53,6 @@
       };
     },
     render: function(){
-      console.log('ChartOptionsView::render');
       var self = this;
       var graphType = self.state.get('graphType');
 
