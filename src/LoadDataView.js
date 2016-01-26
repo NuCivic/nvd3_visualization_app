@@ -1,6 +1,6 @@
 ;(function ($, my) {
   'use strict';
-
+  console.log('LDV 1');
   my.LoadDataView = Backbone.View.extend({
     template: '<div class="form-group">' +
                 '<label for="control-chart-source">Source</label>' +
@@ -38,6 +38,17 @@
         backend: backend,
         url: url
       };
+      state.set('source', source);
+      console.log('<< 1', state);
+//      $.get(url).done(function(data){
+//        console.log('<< 2', data);
+//        data = data.replace(/(?:\r|\n)/g, '\r\n');
+//        data = CSV.parse(data);
+//        console.log('<< 3', data);
+//        state.set('model', new recline.Model.Dataset({records: data}));
+//        console.log('<< 4', state);
+//        cb(state);
+//      });
       state.set('model', new recline.Model.Dataset(source));
       state.set('source', source);
       state.get('model').queryState.attributes.size = 10000000;
