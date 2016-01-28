@@ -65,8 +65,8 @@
       var options = state.get('options') || {};
       state.set('seriesFields', self.$('#control-chart-series').val());
       state.set('xDataType', self.$('input[name=control-chart-x-data-type]:checked').val());
-      options.x = self.$('#control-chart-xfield').val();
       state.set('options', options);
+      state.set('xfield', self.$('#control-chart-xfield').val());
 
       cb(state);
     }

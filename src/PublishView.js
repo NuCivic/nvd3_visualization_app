@@ -56,7 +56,6 @@
       self.$('#control-chart-embed').val(iframeHtml);
     },
     render: function(){
-      console.log('ChartOptionsView::render');
       var self = this;
       var graphType = self.state.get('graphType');
       var jsonState = self.cleanState(self.state);

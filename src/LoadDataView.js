@@ -1,6 +1,5 @@
 ;(function ($, my) {
   'use strict';
-
   my.LoadDataView = Backbone.View.extend({
     template: '<div class="form-group">' +
                 '<label for="control-chart-source">Source</label>' +
@@ -38,6 +37,7 @@
         backend: backend,
         url: url
       };
+      state.set('source', source);
       state.set('model', new recline.Model.Dataset(source));
       state.set('source', source);
       state.get('model').queryState.attributes.size = 10000000;
