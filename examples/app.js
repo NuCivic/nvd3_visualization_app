@@ -2,7 +2,8 @@
   'use strict';
 
   $(document).on('ready', function(){
-  	var state = new recline.Model.ObjectState();
+    console.log('1..');
+    var state = new recline.Model.ObjectState();
     var sharedObject = {state: state};
 
   	var msv = new MultiStageView({
