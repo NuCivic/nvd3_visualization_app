@@ -45,6 +45,7 @@
               '</div>',
     initialize: function(options){
       var self = this;
+      console.log('chart option view init');
       self.options = _.defaults(options || {}, self.options);
       self.state = self.options.state;
       self.stepInfo = {
@@ -56,29 +57,31 @@
       console.log("render options view");
       var self = this;
       var graphType = self.state.get('graphType');
-
       self.state.set('group', true, {silent:true});
       self.$el.html(Mustache.render(self.template, self.state.toJSON()));
       
-      console.log("graphType", graphType);
       // Common controls for all the charts.
       self.baseControls = new recline.View.nvd3.BaseControl({
         model: self.state.get('model'),
         state: self.state,
-        parent: self
+        parent: self,
       });
-      
+            
       // Controls available only for this graphType.
       self.extendedControls = new recline.View.nvd3[graphType + 'Controls']({
         model: self.state.get('model'),
-        state: self.state
+        state: self.state,
+        renderQueryEditor : true,
+        renderFilterEditor : true,
+        parent : self
       });
-//      console.log('options view', self.baseControls, self.extendedControls);
+      
       // Chart itself.
       self.graph = new recline.View.nvd3[graphType]({
         model: self.state.get('model'),
         state: self.state
       });
+      
       // Grid
       self.grid = new recline.View.SlickGrid({
         model: self.state.get('model'),
