@@ -112,7 +112,8 @@
 #example {
   margin-top: 100px;
 }
-
+ul li {list-style:none}
 .example-data {-webkit-border-radius: 10px;
-border-radius: 10px; background-color:#E8E8E8  ; padding:8px 12px; }
+border-radius: 10px; background-color:#E8E8E8  ; padding:8px 12px; margin:4em 3em 3em 3em }
 .example-data:hover {cursor:pointer}
+

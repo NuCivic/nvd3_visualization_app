@@ -10,6 +10,7 @@
                   '<option value="csv">CSV</option>' +
                   '<option value="gdocs">Google Spreadsheet</option>' +
                   '<option value="ckan">DataProxy</option>' +
+                  '<option value="cartodb">CartoDB</option>' +
                 '</select>' +
               '</div>' +
               '<div id="controls">' +
