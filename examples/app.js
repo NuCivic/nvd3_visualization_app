@@ -1,4 +1,4 @@
-;(function(){
+
   'use strict';
 
   $(document).on('ready', function(){
@@ -25,6 +25,15 @@
     // only useful in devel
     window.msv = msv;
     window.sharedObject = sharedObject;
-  });
 
+    _addEventListeners();
 })(window);
+
+function _addEventListeners () {
+  console.log('Add events');
+  $('.example-data').click(function (e) {
+    console.log('c',e);
+    $('#control-chart-source').val($(e.target).text());
+    $('#control-chart-backend').val($(e.target).data('type'));
+  });
+}
