@@ -13,11 +13,15 @@
   <link rel="stylesheet" href="../css/slickgrid.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../vendor/nvd3/build/nv.d3.css">
+  <link rel="stylesheet" href="../vendor/spectrum/spectrum.css">
 
   <!-- 3rd party JS libraries -->
+  <script src='../node_modules/es2sql/dist/bundle.js'></script>
   <script src="../vendor/slickgrid/lib/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="../vendor/spectrum/spectrum.js"></script>
   <script src="../vendor/chosen/chosen.jquery.min.js"></script>
   <script src="../vendor/csv.js/csv.js"></script>
+  <script src="../node_modules/es2sql/dist/bundle.js"></script>
   <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>  <script type="text/javascript" src="../vendor/recline.backend.cartodb/dist/recline.backend.papaparse.min.js"></script>
   <script src="../vendor/recline.backend.gdocs/backend.gdocs.js"></script>
   <script src="../vendor/lodash/dist/lodash.js"></script>
@@ -52,15 +56,12 @@
             Use the following examples as test data sources.
           </div>
           <div class="panel-footer">
-            <strong>CSV</strong>
-            <ul>
+            <ul id="example-types">
+              <li><span class="strong left">CSV</span></li>
               <li><span class="example-data" data-type="csv">http://demo.getdkan.com/sites/default/files/us_foreclosures_jan_2012_by_state_0.csv</span></li>
-            </ul>
-            <strong>Google Doc</strong>
-            <ul>
-              <li><span class="example-data" data-type="gdocs">https://docs.google.com/spreadsheet/ccc?key=0Aon3JiuouxLUdGZPaUZsMjBxeGhfOWRlWm85MmV0UUE#gid=0</span></li></ul>
-          <strong>CartoDB</strong>
-          <ul>
+              <li><span class="strong left">GDOCS</span></li>
+              <li><span class="example-data" data-type="gdocs">https://docs.google.com/spreadsheet/ccc?key=0Aon3JiuouxLUdGZPaUZsMjBxeGhfOWRlWm85MmV0UUE#gid=0</span></li>
+              <li><span class="strong left">cartoDB</span></li>
               <li><span class="example-data" data-type="cartodb">http://starsinmypockets.cartodb.com/api/v2/sql?q=SELECT%20*%20FROM%20public.congressional_districts_2015%20LIMIT%20100</span></li>
     </ul>
           </div>

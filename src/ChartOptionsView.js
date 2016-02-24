@@ -1,6 +1,5 @@
 ;(function ($, my) {
   'use strict';
-
   my.ChartOptionsView = Backbone.View.extend({
     template: '<div class="row" id="chart-with-controls">' +
                 '<div class="col-md-7">' +
@@ -63,7 +62,8 @@
       self.baseControls = new recline.View.nvd3.BaseControl({
         model: self.state.get('model'),
         state: self.state,
-        parent: self
+        parent: self,
+        renderFilterEditor: true
       });
 
       // Controls available only for this graphType.
