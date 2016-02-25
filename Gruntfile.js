@@ -54,9 +54,9 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-//    'jshint',
+    'jshint',
     'concat',
-//    'uglify'
+    'uglify'
   ]);
   grunt.registerTask('lint', ['jshint']);
 };
