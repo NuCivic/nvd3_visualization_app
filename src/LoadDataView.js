@@ -10,12 +10,14 @@
                   '<option value="csv">CSV</option>' +
                   '<option value="gdocs">Google Spreadsheet</option>' +
                   '<option value="ckan">DataProxy</option>' +
+                  '<option value="cartodb">CartoDB</option>' +
                 '</select>' +
               '</div>' +
               '<div id="controls">' +
                 '<div id="next" class="btn btn-primary pull-right">Next</div>' +
               '</div>',
     initialize: function(options){
+      console.log('1');
       var self = this;
       self.options = _.defaults(options || {}, self.options);
       self.state = self.options.state;
@@ -26,10 +28,12 @@
       };
     },
     render: function(){
+      console.log(2);
       var self = this;
       self.$el.html(Mustache.render(self.template, self.state.toJSON()));
     },
     updateState: function(state, cb){
+      console.log(3, state);
       var self = this;
       var url = self.$('#control-chart-source').val();
       var backend = self.$('#control-chart-backend').val();

@@ -109,6 +109,10 @@
 #chart-selector .cumulativeLineChart {
   background-image: url('img/cumulativeline.png');
 }
-#example {
-  margin-top: 100px;
-}
+
+#example-types {width:100%}
+#example-types li {list-style:none; text-align:center; }
+#example-types .strong {font-weight:800}
+.example-data {-webkit-border-radius: 10px;
+border-radius: 10px; background-color:#E8E8E8; margin:20px; padding:5px; display:inline-block; max-width:100%}
+.example-data:hover {cursor:pointer}
