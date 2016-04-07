@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Recline NVD3</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/slickgrid/slick.grid.css">
+  <link rel="stylesheet" href="public/chosen-bootstrap/chosen.bootstrap.css">
+  <link rel="stylesheet" href="css/slickgrid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="public/nvd3/build/nv.d3.css">
+  <link rel="stylesheet" href="public/spectrum/spectrum.css">
+
+  <!-- 3rd party JS libraries -->
+  <script src='node_modules/es2sql/dist/bundle.js'></script>
+  <script src="public/slickgrid/lib/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="public/spectrum/spectrum.js"></script>
+  <script src="public/chosen/chosen.jquery.min.js"></script>
+  <script src="public/csv.js/csv.js"></script>
+  <script src="node_modules/es2sql/dist/bundle.js"></script>
+  <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>  <script type="text/javascript" src="public/recline.backend.cartodb/dist/recline.backend.papaparse.min.js"></script>
+  <script src="public/recline.backend.gdocs/backend.gdocs.js"></script>
+  <script src="public/lodash/dist/lodash.js"></script>
+  <script src="public/lodash.data/dist/lodash.data.min.js"></script>
+  <script src="public/backbone/backbone.js"></script>
+  <script src="public/mustache/mustache.js"></script>
+  <script src="public/bootstrap-css/js/bootstrap.js"></script>
+  <script src="public/slickgrid/lib/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="public/slickgrid/lib/jquery.event.drag-2.2.js"></script>
+  <script src="public/slickgrid/lib/jquery.event.drop-2.2.js"></script>
+  <script src="public/slickgrid/slick.core.js"></script>
+  <script src="public/slickgrid/slick.formatters.js"></script>
+  <script src="public/slickgrid/slick.editors.js"></script>
+  <script src="public/slickgrid/slick.grid.js"></script>
+  <script src="public/slickgrid/plugins/slick.rowselectionmodel.js"></script>
+  <script src="public/slickgrid/plugins/slick.rowmovemanager.js"></script>
+  <script src="public/moment/moment.js"></script>
+  <script src="http://okfnlabs.org/recline/dist/recline.min.js"></script>
+  <script src="public/d3/d3.js"></script>
+  <script src="public/nvd3/build/nv.d3.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="steps">
+        </div>
+        <div class="panel panel-default" id="example">
+          <div class="panel-body">
+            <h4>example data</h4>
+            Use the following examples as test data sources.
+          </div>
+          <div class="panel-footer">
+            <ul id="example-types">
+              <li><span class="strong left">CSV</span></li>
+              <li><span class="example-data" data-type="csv">http://demo.getdkan.com/sites/default/files/us_foreclosures_jan_2012_by_state_0.csv</span></li>
+              <li><span class="strong left">GDOCS</span></li>
+              <li><span class="example-data" data-type="gdocs">https://docs.google.com/spreadsheet/ccc?key=0Aon3JiuouxLUdGZPaUZsMjBxeGhfOWRlWm85MmV0UUE#gid=0</span></li>
+              <li><span class="strong left">cartoDB</span></li>
+              <li><span class="example-data" data-type="cartodb">http://starsinmypockets.cartodb.com/api/v2/sql?q=SELECT%20*%20FROM%20public.congressional_districts_2015%20LIMIT%20100</span></li>
+    </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer style="text-align:center;width: 100%; font-size:12px;">
+    <strong>Disclaimer:</strong> Early alpha phase, use at your own risk. Embed urls could change in the near future.
+  </footer>
+  <script type="text/javascript" src="public/recline.view.nvd3/dist/recline.view.nvd3.min.js"></script>
+  <script type="text/javascript" src="public/recline.view.nvd3/dist/recline.view.nvd3.controls.min.js"></script>
+  <script type="text/javascript" src="src/recline.URLState.js"></script>
+  <script type="text/javascript" src="src/recline.view.nvd3.embedControl.js"></script>
+  <script type="text/javascript" src="src/MultiStageView.js"></script>
+  <script type="text/javascript" src="src/LoadDataView.js"></script>
+  <script type="text/javascript" src="src/DataOptionsView.js"></script>
+  <script type="text/javascript" src="src/ChooseChartView.js"></script>
+  <script type="text/javascript" src="src/ChartOptionsView.js"></script>
+  <script type="text/javascript" src="src/PublishView.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

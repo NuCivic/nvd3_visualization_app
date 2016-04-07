@@ -1,0 +1,17 @@
+{
+  "name": "json",
+  "version": "2015.05.03",
+  "description": "JSON component",
+  "keywords": [
+    "json",
+    "json2"
+  ],
+  "ignore": [
+    "package.json"
+  ],
+  "main": "json2.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "JSON License"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "es2sql",
+  "description": "A simplelibrary for converting elastic search type query objects to sql",
+  "main": "./dist/bundle.js",
+  "authors": [
+    "Paul Walker / NuCivic"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "elastic",
+    "searc",
+    "sql",
+    "es6"
+  ],
+  "homepage": "https://github.com/NuCivic/es2sql",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main" : "./dist/bundle.js"
+}
